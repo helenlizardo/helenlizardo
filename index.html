@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="h-full scroll-smooth">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ebook Aleitamento Materno - Helen Lizardo</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Guia Prático para Mães e Bebês- Helen Lizardo</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0&display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0&display=swap"
+        rel="stylesheet" />
+
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -40,41 +44,105 @@
             /* color: #f28ecb */
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+
         /* Custom smooth expansion for accordion */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
         }
+
         .accordion-content.open {
             max-height: 1000px;
             transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
         }
+
+
+        .autora-card {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 32px;
+            border-radius: 12px;
+            background: #fff7f8;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            font-family: Arial, sans-serif;
+        }
+
+        .autora-img img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 00%;
+            border: 6px solid #f3c7cf;
+        }
+
+        .autora-texto h2 {
+            margin: 0 0 8px;
+            color: #b85c72;
+            font-size: 28px;
+        }
+
+        .autora-texto h3 {
+            margin: 0 0 18px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .autora-texto p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .autora-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+
+            .autora-img img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .autora-texto h2 {
+                font-size: 24px;
+            }
+
+            .autora-texto h3 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
+
 <body class="bg-maternity-50 text-accent-text font-sans antialiased selection:bg-maternity-100">
 
     <!-- Top Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-maternity-50/80 border-b border-maternity-100 transition-all duration-300">
+    <header
+        class="sticky top-0 z-50 backdrop-blur-md bg-maternity-50/80 border-b border-maternity-100 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <span class="font-serif italic font-bold text-lg text-maternity-900">Helen Lizardo</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-accent-rose"></span>
-                <span class="text-[12px] uppercase tracking-widest font-medium text-maternity-600">Bestseller</span>
+                <span class="text-[12px] uppercase tracking-widest font-medium text-maternity-600">Arte de Cuidar</span>
             </div>
             <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-maternity-900/70">
                 <a href="#sobre" class="hover:text-maternity-900 transition-colors">O Ebook</a>
                 <a href="#capitulos" class="hover:text-maternity-900 transition-colors">Conteúdo</a>
-                <a href="#depoimentos" class="hover:text-maternity-900 transition-colors">Depoimentos</a>
+                <a href="#depoimentos" class="hover:text-maternity-900 transition-colors">Sobre a Autora</a>
             </nav>
             <div class="flex items-center gap-4">
                 <!-- <button onclick="downloadDemo()" class="text-[12px] font-medium text-maternity-600 hover:text-maternity-900 flex items-center gap-1.5 border border-maternity-500/20 px-3 py-1.5 rounded-md hover:bg-white transition-all shadow-sm">
                     <span class="material-symbols-outlined text-[16px]">download</span>
                     Baixar Código
                 </button> -->
-                <a href="https://hlizardo170.hotmart.host/ebook-informativo-sobre-aleitamento-materno-672a58db-3191-4acc-81b8-38abb10966c3" class="bg-maternity-900 text-white px-4 py-2 rounded-md text-[13px] font-medium hover:bg-maternity-600 transition-colors shadow-sm">
-                    Garantir Cópia
-                </a>
+
             </div>
         </div>
     </header>
@@ -82,40 +150,51 @@
     <!-- Hero Section -->
     <section class="max-w-6xl mx-auto px-4 pt-12 pb-20 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div class="md:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-maternity-100 text-maternity-900 text-[12px] font-medium">
+            <div
+                class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-maternity-100 text-maternity-900 text-[12px] font-medium">
                 <span class="w-2 h-2 rounded-full bg-maternity-500 animate-pulse"></span>
                 Mamães de primeira viagem
             </div>
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-maternity-900 leading-[1.15] tracking-tight">
-                Amamentação para Mamães: <br><span class="italic text-maternity-600 font-normal">O guia definitivo para amamentar com leveza, amor e sem dor.</span>
+                Guia Prático para Mães: <br><span class="italic text-maternity-600 font-normal">Como oferecer o leite materno com segurança</span>
             </h2>
             <p class="text-[16px] text-accent-text/80 leading-relaxed max-w-xl">
-                Descubra o passo a passo prático desenvolvido pela especialista Helen Lizardo para dominar a pega correta, evitar fissuras, entender a livre demanda e criar uma conexão profunda com o seu bebê desde o primeiro dia.
+                Conteúdo educativo sobre a conservação do leite materno, extração, preparo da fórmula infantil e higiene
+                na alimentação do bebê.
             </p>
             <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <a href="#comprar" class="bg-maternity-500 text-white px-8 py-3.5 rounded-md font-medium hover:bg-maternity-600 transition-colors text-center shadow-md">
-                    Quero Amamentar Sem Dor
+                <a href="#comprar"
+                    class="bg-maternity-500 text-white px-8 py-3.5 rounded-md font-medium hover:bg-maternity-600 transition-colors text-center shadow-md">
+                    Acessar o Conteúdo
                 </a>
-                <a href="#capitulos" class="flex items-center justify-center gap-2 px-6 py-3.5 border border-maternity-100 rounded-md text-[14px] font-medium hover:bg-white transition-all">
+                <a href="#capitulos"
+                    class="flex items-center justify-center gap-2 px-6 py-3.5 border border-maternity-100 rounded-md text-[14px] font-medium hover:bg-white transition-all">
                     Explorar os Capítulos
                 </a>
             </div>
         </div>
-        
+
         <!-- Ebook Cover Presentation -->
         <div class="md:col-span-5 flex justify-center">
             <div class="relative group">
-                <div class="absolute inset-0 bg-accent-rose/20 rounded-2xl blur-2xl transform rotate-3 scale-105 group-hover:scale-110 transition-transform duration-500"></div>
+                <div
+                    class="absolute inset-0 bg-accent-rose/20 rounded-2xl blur-2xl transform rotate-3 scale-105 group-hover:scale-110 transition-transform duration-500">
+                </div>
                 <!-- Interactive Realistic 3D Book Mockup Aspect -->
-                <div class="relative bg-white border border-maternity-100 rounded-xl p-8 shadow-xl w-[320px] transform hover:-translate-y-2 transition-transform duration-300 select-none">
-                    <div class="border-2 border-maternity-500/20 rounded-lg p-6 h-[400px] flex flex-col justify-between bg-gradient-to-br from-maternity-50 to-white relative overflow-hidden">
+                <div
+                    class="relative bg-white border border-maternity-100 rounded-xl p-8 shadow-xl w-[320px] transform hover:-translate-y-2 transition-transform duration-300 select-none">
+                    <div
+                        class="border-2 border-maternity-500/20 rounded-lg p-6 h-[400px] flex flex-col justify-between bg-gradient-to-br from-maternity-50 to-white relative overflow-hidden">
                         <div class="absolute -right-16 -top-16 w-32 h-32 bg-accent-rose/30 rounded-full blur-xl"></div>
                         <div class="space-y-2">
                             <p class="text-[10px] uppercase tracking-widest font-semibold text-maternity-600">EBOOK</p>
-                            <h3 class="text-2xl font-serif font-bold text-maternity-900 leading-tight">Amamentação para Mamães</h3>
-                            <p class="text-[11px] text-accent-text/60 italic">O manual prático da descida do leite à introdução alimentar.</p>
+                            <h3 class="text-2xl font-serif font-bold text-maternity-900 leading-tight">Guia Prático 
+                                <br>para
+                                Mães</h3>
+                            <p class="text-[11px] text-accent-text/60 italic">Como armazenar e preparar o leite materno com segurança.</p>
                         </div>
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/022/751/448/small/happy-mother-with-newborn-png.png"/>
+                        <img
+                            src="https://static.vecteezy.com/system/resources/thumbnails/022/751/448/small/happy-mother-with-newborn-png.png" />
                         <div class="space-y-4">
                             <div class="h-px bg-maternity-100 w-12"></div>
                             <p class="text-[13px] font-serif italic font-medium text-maternity-900">Helen Lizardo</p>
@@ -130,30 +209,39 @@
     <section id="sobre" class="bg-white border-y border-maternity-100 py-16">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center max-w-xl mx-auto space-y-2 mb-12">
-                <h3 class="text-[11px] font-semibold text-maternity-600 uppercase tracking-widest">O que você vai aprender</h3>
-                <h4 class="text-2xl font-serif font-bold text-maternity-900">Tudo o que a maternidade real exige, explicado de forma leve e descomplicada.</h4>
+                <h3 class="text-[11px] font-semibold text-maternity-600 uppercase tracking-widest">O que você vai
+                    aprender</h3>
+                <h4 class="text-2xl font-serif font-bold text-maternity-900">Armazenamento Seguro</h4>
+                <h4 class="text-2xl font-serif font-bold text-maternity-900">
+                    Como conservar o leite materno corretamente na geladeira e freezer.</h4>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-6 bg-maternity-50 rounded-xl border border-maternity-100 space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
                         <span class="material-symbols-outlined">verified_user</span>
                     </div>
-                    <h5 class="font-semibold text-maternity-900">Fim das Dores e Fissuras</h5>
-                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Técnicas anatômicas detalhadas e posicionamentos ilustrados para garantir uma pega perfeita e indolor desde a primeira mamada.</p>
+                    <h5 class="font-semibold text-maternity-900">Extração Manual e com Bomba</h5>
+                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Métodos práticos de coleta do leite com
+                        higiene e segurança.</p>
                 </div>
                 <div class="p-6 bg-maternity-50 rounded-xl border border-maternity-100 space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
                         <span class="material-symbols-outlined">schedule</span>
                     </div>
-                    <h5 class="font-semibold text-maternity-900">Rotina e Livre Demanda</h5>
-                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Aprenda a decifrar os sinais de fome, saciedade e os picos de crescimento do bebê, sem se tornar escrava do relógio.</p>
+                    <h5 class="font-semibold text-maternity-900">Fórmula Infantil na Prática</h5>
+                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Entenda tipos de fórmulas e como preparar
+                        corretamente.</p>
                 </div>
                 <div class="p-6 bg-maternity-50 rounded-xl border border-maternity-100 space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
-                        <span class="material-symbols-outlined">psychology</span>
+                    <div
+                        class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-maternity-500 shadow-sm">
+                        <span class="material-symbols-outlined">child_care</span>
                     </div>
-                    <h5 class="font-semibold text-maternity-900">Segurança Emocional</h5>
-                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Como lidar com os palpites externos, o cansaço extremo, a descida do leite (apoio) e blindar o seu psicológico nesse ciclo único.</p>
+                    <h5 class="font-semibold text-maternity-900">Higiene e Conservação</h5>
+                    <p class="text-[13px] text-accent-text/70 leading-relaxed">Cuidados essenciais para mamadeiras,
+                        recipientes e utensílios.</p>
                 </div>
             </div>
         </div>
@@ -163,164 +251,141 @@
     <section id="capitulos" class="max-w-3xl mx-auto px-4 py-20">
         <div class="text-center space-y-2 mb-10">
             <h3 class="text-[11px] font-semibold text-maternity-600 uppercase tracking-widest">Estrutura Interna</h3>
-            <h4 class="text-3xl font-serif font-bold text-maternity-900">Dê uma espiada no sumário do livro</h4>
+            <h4 class="text-3xl font-serif font-bold text-maternity-900">Veja os capítulos do ebook</h4>
         </div>
 
         <div class="space-y-3">
             <!-- Accordion Item 1 -->
             <div class="bg-white border border-maternity-100 rounded-lg overflow-hidden transition-all duration-200">
-                <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
+                <button onclick="toggleAccordion(this)"
+                    class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
                     <div class="flex items-center gap-4">
                         <span class="font-serif italic text-maternity-500 font-bold text-lg">01</span>
-                        <span class="font-medium text-maternity-900 text-[15px]">O Preparo na Gestação: Anatomia e Mitos</span>
+                        <span class="font-medium text-maternity-900 text-[15px]">Importância do Leite Materno para o
+                            Bebê</span>
                     </div>
-                    <span class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
+                    <span
+                        class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
                 </button>
                 <div class="accordion-content">
-                    <div class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
-                        <p>• Como as mamas se transformam durante os 9 meses.</p>
-                        <p>• A verdade sobre produtos para "preparar o bico" (o que realmente funciona).</p>
-                        <p>• O colostro: o ouro líquido e sua importância imunológica crucial.</p>
+                    <div
+                        class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
+                        <p>• Composição nutricional</p>
+                        <p>• Fortalecimento do Sistema Imunológico</p>
+                        <p>• Vínculo entre mãe e bebê</p>
                     </div>
                 </div>
             </div>
 
             <!-- Accordion Item 2 -->
             <div class="bg-white border border-maternity-100 rounded-lg overflow-hidden transition-all duration-200">
-                <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
+                <button onclick="toggleAccordion(this)"
+                    class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
                     <div class="flex items-center gap-4">
                         <span class="font-serif italic text-maternity-500 font-bold text-lg">02</span>
-                        <span class="font-medium text-maternity-900 text-[15px]">A Mecânica Perfeita da Pega e Posições</span>
+                        <span class="font-medium text-maternity-900 text-[15px]">Armazenamento do leite materno</span>
                     </div>
-                    <span class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
+                    <span
+                        class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
                 </button>
                 <div class="accordion-content">
-                    <div class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
-                        <p>• Alinhamento do corpo do bebê (barriga com barriga).</p>
-                        <p>• Sinais visuais de uma pega correta (boca de peixinho, queixo encostado).</p>
-                        <p>• 4 posições clássicas e confortáveis para descansar a coluna da mamãe.</p>
+                    <div
+                        class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
+                        <p>• Coleta do leite</p>
+                        <p>• Higiene </p>
+                        <p>• Métodos de extração</p>
                     </div>
                 </div>
             </div>
 
             <!-- Accordion Item 3 -->
             <div class="bg-white border border-maternity-100 rounded-lg overflow-hidden transition-all duration-200">
-                <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
+                <button onclick="toggleAccordion(this)"
+                    class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
                     <div class="flex items-center gap-4">
                         <span class="font-serif italic text-maternity-500 font-bold text-lg">03</span>
-                        <span class="font-medium text-maternity-900 text-[15px]">Intercorrências: Prevenção e Tratamento Rápido</span>
+                        <span class="font-medium text-maternity-900 text-[15px]">Condições de armazenamento</span>
                     </div>
-                    <span class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
+                    <span
+                        class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
                 </button>
                 <div class="accordion-content">
-                    <div class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
-                        <p>• O que fazer em caso de ingurgitamento mamário (leite empedrado).</p>
-                        <p>• Como curar fissuras rapidamente usando o próprio leite materno.</p>
-                        <p>• Mastite: identificando os sinais de alerta para buscar ajuda médica.</p>
+                    <div
+                        class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
+                        <p>• Frascos de Vidro.</p>
+                        <p>• Frascos de plástico.</p>
+                        <p>• Recipientes de silicone.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Accordion Item 4 -->
             <div class="bg-white border border-maternity-100 rounded-lg overflow-hidden transition-all duration-200">
-                <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
+                <button onclick="toggleAccordion(this)"
+                    class="w-full px-6 py-4 flex justify-between items-center hover:bg-maternity-50/50 text-left">
                     <div class="flex items-center gap-4">
                         <span class="font-serif italic text-maternity-500 font-bold text-lg">04</span>
-                        <span class="font-medium text-maternity-900 text-[15px]">O Retorno ao Trabalho e Armazenamento</span>
+                        <span class="font-medium text-maternity-900 text-[15px]">Descongelamento e aquecimento do leite
+                            materno</span>
                     </div>
-                    <span class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
+                    <span
+                        class="material-symbols-outlined text-maternity-600 transform transition-transform duration-200">expand_more</span>
                 </button>
                 <div class="accordion-content">
-                    <div class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
-                        <p>• Como montar um estoque de leite materno seguro.</p>
-                        <p>• Regras de congelamento, descongelamento e aquecimento correto em banho-maria.</p>
-                        <p>• Como oferecer o leite sem causar confusão de bicos.</p>
+                    <div
+                        class="p-6 pt-2 border-t border-maternity-100 bg-maternity-50/30 text-[13px] text-accent-text/80 space-y-2">
+                        <p>• Métodos seguros de descongelamento.</p>
+                        <p>• Passo a passo para testar a temperatura.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="depoimentos" class="bg-maternity-100/40 border-y border-maternity-100 py-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-xl mx-auto space-y-2 mb-12">
-                <h3 class="text-[11px] font-semibold text-maternity-600 uppercase tracking-widest">Depoimentos</h3>
-                <h4 class="text-3xl font-serif font-bold text-maternity-900">Histórias reais de quem leu e transformou a jornada</h4>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl border border-maternity-100 space-y-4 shadow-sm">
-                    <div class="flex text-amber-500 gap-0.5">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                    <p class="text-[13px] text-accent-text/80 italic leading-relaxed">
-                        "Eu chorava de dor a cada mamada antes de comprar o livro da Helen. Na segunda noite aplicando a técnica da pega assimétrica, meu bebê mamou perfeitamente e a dor sumiu. Um milagre!"
-                    </p>
-                    <div class="border-t border-maternity-100 pt-3 flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-maternity-100 flex items-center justify-center text-[12px] font-bold text-maternity-600">MA</div>
-                        <div>
-                            <p class="text-[13px] font-semibold text-maternity-900">Mariana Almeida</p>
-                            <p class="text-[11px] text-ui-textMuted">Mãe do Léo (3 meses)</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="autora-card">
+        <div class="autora-img">
+            <img src="./img/autora.png" alt="Helen Maria Lizardo Vitor">
+        </div>
 
-                <div class="bg-white p-6 rounded-xl border border-maternity-100 space-y-4 shadow-sm">
-                    <div class="flex text-amber-500 gap-0.5">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                    <p class="text-[13px] text-accent-text/80 italic leading-relaxed">
-                        "O capítulo sobre estoque de leite salvou meu retorno ao trabalho. Consegui manter a amamentação exclusiva sem precisar de fórmulas. Helen é extremamente didática e acolhedora."
-                    </p>
-                    <div class="border-t border-maternity-100 pt-3 flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-maternity-100 flex items-center justify-center text-[12px] font-bold text-maternity-600">CR</div>
-                        <div>
-                            <p class="text-[13px] font-semibold text-maternity-900">Camila Alves</p>
-                            <p class="text-[11px] text-ui-textMuted">Mãe da Clara (6 meses)</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="autora-texto">
+            <h2>Sobre a autora</h2>
+            <h3>Helen Maria Lizardo Vitor</h3>
 
-                <div class="bg-white p-6 rounded-xl border border-maternity-100 space-y-4 shadow-sm">
-                    <div class="flex text-amber-500 gap-0.5">
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    </div>
-                    <p class="text-[13px] text-accent-text/80 italic leading-relaxed">
-                        "Comprei ainda na gravidez por indicação de uma amiga. Graças às orientações sobre o colostro e a subida do leite, passei pelo pós-parto sem desespero e com muita segurança."
-                    </p>
-                    <div class="border-t border-maternity-100 pt-3 flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-maternity-100 flex items-center justify-center text-[12px] font-bold text-maternity-600">VS</div>
-                        <div>
-                            <p class="text-[13px] font-semibold text-maternity-900">Vanessa Silva</p>
-                            <p class="text-[11px] text-ui-textMuted">Gestante de 38 semanas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>
+                Tenho 33 anos e sou técnica de enfermagem há 14 anos. Durante 9 anos,
+                atuei na UTI Neonatal do Hospital Santa Isabel, na cidade de Ubá,
+                adquirindo experiência no cuidado com recém-nascidos e no acolhimento
+                às famílias nos primeiros momentos de vida do bebê.
+            </p>
+
+            <p>
+                Desenvolvi este conteúdo especialmente para mães de primeira viagem e
+                famílias que estão vivenciando a chegada de um recém-nascido em casa,
+                reunindo orientações práticas e acessíveis para auxiliar nessa fase tão
+                importante.
+            </p>
+
+            <p>
+                Atualmente, integro o grupo de home care baby Arte de Cuidar, com foco
+                em acolhimento, orientação e cuidado humanizado. Este material foi
+                elaborado com base na experiência em cuidados materno-infantis.
+            </p>
         </div>
     </section>
 
     <!-- Action Section / Pricing -->
     <section id="comprar" class="max-w-4xl mx-auto px-4 py-20 text-center space-y-8">
         <div class="space-y-3">
-            <h3 class="text-3xl md:text-4xl font-serif font-bold text-maternity-900">Comece sua jornada de amamentação tranquila hoje</h3>
-            <p class="text-[15px] text-accent-text/80 max-w-xl mx-auto">Receba imediatamente o arquivo digital em formato PDF, EPUB e o audiolivro bônus para ouvir enquanto cuida do seu bebê.</p>
+            <h3 class="text-3xl md:text-4xl font-serif font-bold text-maternity-900">Material digital desenvolvido para
+                auxiliar mães e famílias na rotina de alimentação do bebê.</h3>
+            <p class="text-[15px] text-accent-text/80 max-w-xl mx-auto">Disponível em PDF.</p>
         </div>
 
-        <div class="bg-white border border-maternity-100 rounded-2xl p-8 max-w-sm mx-auto shadow-lg space-y-6 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-accent-rose text-maternity-900 px-4 py-1 text-[11px] font-bold uppercase tracking-wider rounded-bl-xl">Oferta Limitada</div>
+        <div
+            class="bg-white border border-maternity-100 rounded-2xl p-8 max-w-sm mx-auto shadow-lg space-y-6 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 bg-accent-rose text-maternity-900 px-4 py-1 text-[11px] font-bold uppercase tracking-wider rounded-bl-xl">
+                Ebook Digital</div>
             <div class="space-y-1">
                 <p class="text-[13px] text-ui-textMuted line-through">De R$ 39,90</p>
                 <p class="text-5xl font-serif font-bold text-maternity-900">R$ 19,<span class="text-2xl">90</span></p>
@@ -329,7 +394,7 @@
             <div class="border-t border-maternity-100 pt-4 space-y-3 text-left text-[13px] text-accent-text/80">
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-maternity-500 text-[18px]">check_circle</span>
-                    <span>Ebook completo</span>
+                    <span>Conteúdo em PDF</span>
                 </div>
                 <!-- <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-maternity-500 text-[18px]">check_circle</span>
@@ -337,11 +402,12 @@
                 </div> -->
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-maternity-500 text-[18px]">check_circle</span>
-                    <span>Garantia incondicional de 7 dias</span>
+                    <span>Garantia de 7 dias pela Hotmart</span>
                 </div>
             </div>
-            <button onclick="simularCompra()" class="w-full py-3 bg-maternity-500 text-white font-medium rounded-lg hover:bg-maternity-600 transition-colors shadow-sm text-[15px]">
-                Adquirir Ebook Agora
+            <button onclick="simularCompra()"
+                class="w-full py-3 bg-maternity-500 text-white font-medium rounded-lg hover:bg-maternity-600 transition-colors shadow-sm text-[15px]">
+                Acesso ao Ebook
             </button>
         </div>
     </section>
@@ -366,7 +432,7 @@
         function toggleAccordion(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('.material-symbols-outlined');
-            
+
             // Toggle open state
             if (content.classList.contains('open')) {
                 content.classList.remove('open');
@@ -380,7 +446,7 @@
 
         // Simulate checkout interaction smoothly
         function simularCompra() {
-            alert('Redirecionando de forma segura para o checkout criptografado...');
+            window.location.href = "https://pay.hotmart.com/I94822361F"
         }
 
         // Automatic Download Utility of the complete Code Monolith directly from Browser
@@ -398,4 +464,5 @@
         }
     </script>
 </body>
+
 </html>
