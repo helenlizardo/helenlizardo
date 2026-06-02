@@ -129,7 +129,29 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-18191502533');
+
 </script>
+<!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18191502533/kp6UCJ-UhLQcEMWZseJD',
+      'value': 1.0,
+      'currency': 'BRL',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
 </head>
 
 <body class="bg-maternity-50 text-accent-text font-sans antialiased selection:bg-maternity-100">
@@ -416,7 +438,8 @@
                     <span>Garantia de 7 dias pela Hotmart</span>
                 </div>
             </div>
-            <button onclick="simularCompra()"
+            <button onclick="gtag_report_conversion('https://pay.hotmart.com/I94822361F')"
+class="w-full py-3 bg-maternity-500 text-white font-medium rounded-lg hover:bg-maternity-600 transition-colors shadow-sm text-[15px]">"
                 class="w-full py-3 bg-maternity-500 text-white font-medium rounded-lg hover:bg-maternity-600 transition-colors shadow-sm text-[15px]">
                 Acesso ao Ebook
             </button>
@@ -456,9 +479,24 @@
         }
 
         // Simulate checkout interaction smoothly
-        function simularCompra() {
-            window.location.href = "https://pay.hotmart.com/I94822361F"
+        function comprar() {
+            window.location.href = "pay.hotmart.com/I94822361F"
         }
+
+function Comprar() {
+
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18191502533/kp6UCJ-UhLQcEMWZseJD',
+        'event_callback': function() {
+            window.location.href = 'pay.hotmart.com/I94822361F';
+        }
+    });
+
+    setTimeout(function() {
+        window.location.href = 'https://pay.hotmart.com/I94822361F';
+    }, 1000);
+}
+
 
         // Automatic Download Utility of the complete Code Monolith directly from Browser
         function downloadProjectFiles() {
